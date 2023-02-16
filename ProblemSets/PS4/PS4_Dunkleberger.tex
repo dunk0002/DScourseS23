@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PS4 Dunkleberger}
+\author{Davis Dunkleberger}
+\date{February 15 2023}
+
+\begin{document}
+\maketitle
+
+\section{Scraping}
+
+I am interested in scraping data from many sports related websites. My program is sports data analytics and there are all sorts of ways to access data. Many of these sites do have APIs that I know of or recommend R packages that provide play by play data similar to nflfastR. With the wide variety of packages ready for me to use, scraping might be a last resource for me and others in my field. 
+
+\section{mydf\$date}
+\begin{enumerate}
+    \item mydf\$date is of the type charachter
+\end{enumerate}
+
+\section{class(df1)}
+\begin{enumerate}
+    \item tbl\_df 
+    \item tbl 
+    \item data.frame
+\end{enumerate}
+
+\section{class(df)}
+\begin{enumerate}
+    \item tbl\_spark 
+    \item tbl\_sql 
+    \item tbl\_lazy
+    \item tbl
+\end{enumerate}
+
+\section{Column Names}
+The names are different between the first two objects. SQL does not like a . in the names of things and instead prefers to use underscores in names. Spark has traits similar to SQL and allows us to use functions in R and other RDD options as well. Spark recreated the object in a format that is easier to read for other types of processes. 
+
+\end{document}
