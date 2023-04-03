@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{siunitx}
+\newcolumntype{d}{S[
+    input-open-uncertainty=,
+    input-close-uncertainty=,
+    parse-numbers = false,
+    table-align-text-pre=false,
+    table-align-text-post=false
+ ]}
+
+\title{PS8\_Dunkleberger}
+\author{Davis Dunkleberger}
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Questions}
+The estimates for $\hat{\beta}_{\text{OLS}}$ compared to the true values of $\beta$ in (1) are nearly exact. There is some variance but that is to be expected when calculating things. 
+
+After computing with the two different algorithms, the answers are only slightly different from each other. The difference is insignificant and the results are the same as $\beta$. 
+
+\section{Summary}
+The table below shows the computed $\hat{\beta}_{\text{OLS}}$ using the lm() method. The estimates are very similar to the ground truth. They are almost exact!
+\begin{table}
+\centering
+\begin{tabular}[t]{lc}
+\toprule
+  & (1)\\
+\midrule
+X1 & \num{1.501}\\
+ & \vphantom{9} (\num{0.001})\\
+X2 & \num{-1.000}\\
+ & \vphantom{8} (\num{0.001})\\
+X3 & \num{-0.251}\\
+ & \vphantom{7} (\num{0.001})\\
+X4 & \num{0.750}\\
+ & \vphantom{6} (\num{0.001})\\
+X5 & \num{3.500}\\
+ & \vphantom{5} (\num{0.001})\\
+X6 & \num{-2.000}\\
+ & \vphantom{4} (\num{0.001})\\
+X7 & \num{0.499}\\
+ & \vphantom{3} (\num{0.001})\\
+X8 & \num{1.001}\\
+ & \vphantom{2} (\num{0.001})\\
+X9 & \num{1.248}\\
+ & \vphantom{1} (\num{0.001})\\
+X10 & \num{2.001}\\
+ & (\num{0.001})\\
+\midrule
+Num.Obs. & \num{1e+05}\\
+R2 & \num{0.998}\\
+R2 Adj. & \num{0.998}\\
+AIC & \num{6514.2}\\
+BIC & \num{6618.8}\\
+Log.Lik. & \num{-3246.093}\\
+RMSE & \num{0.25}\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\end{document}
