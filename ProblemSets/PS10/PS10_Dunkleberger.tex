@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PS10\_Dunkleberger}
+\author{Davis Dunkleberger}
+\date{April 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Table Results and Evaluation}
+The table below reports the results of the five tribes predicting if someone is a high income or not. The out of sample estimates are all close to each other and are solidly accurate. There is a low penalty associated with the each of the algorithms. These ML tribes are all similar and can have their own uses. Which tribe that should be used could depend on personal choice. 
+
+\begin{table}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+         \hline Algorithm & Penalty & Estimate & Cost Complexity & Tree Depth & Min N & Hidden Units \\
+         \hline Logit & 0.00 & 0.85 & NA & NA & NA & NA \\
+         \hline Tree & NA & 0.87 & 0.00 & 15.00 & 10.00 & NA \\
+         \hline Neural Net & 0.01 & 0.81 & NA & NA & NA & 8.00 \\
+         \hline KNN & 0.01 & 0.84 & NA & NA & NA & 8.00 \\
+         \hline SVM & 0.01 & 0.86 & NA & NA & NA & 8.00 \\
+         \hline
+    \end{tabular}
+    \caption{ML Estimates}
+    \label{tab:ML_Estimates}
+\end{table}
+
+\end{document}
