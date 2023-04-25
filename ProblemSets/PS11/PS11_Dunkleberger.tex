@@ -1,0 +1,207 @@
+\documentclass[12pt,english]{article}
+\usepackage{mathptmx}
+
+\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{darkblue}{RGB}{0.,0.,139.}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{amsmath}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{lipsum}
+
+\usepackage[authoryear]{natbib}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{graphicx}
+\usepackage[english]{babel}
+\usepackage{pdflscape}
+\usepackage[unicode=true,pdfusetitle,
+ bookmarks=true,bookmarksnumbered=false,bookmarksopen=false,
+ breaklinks=true,pdfborder={0 0 0},backref=false,
+ colorlinks,citecolor=black,filecolor=black,
+ linkcolor=black,urlcolor=black]
+ {hyperref}
+\usepackage[all]{hypcap} % Links point to top of image, builds on hyperref
+\usepackage{breakurl}    % Allows urls to wrap, including hyperref
+
+\linespread{2}
+
+\begin{document}
+
+\begin{singlespace}
+\title{Can Machine Learning Help Predict Goals in an NHL Season?\thanks{Thank you to Professor Ransom for nailing down the topic of research}}
+\end{singlespace}
+
+\author{Davis Dunkleberger\thanks{Department of Health and Exercise Science, University of Oklahoma.\
+E-mail~address:~\href{mailto:student.name@ou.edu}{davisdunk@ou.edu}}}
+
+% \date{\today}
+\date{\today}
+
+\maketitle
+
+\begin{abstract}
+\begin{singlespace}
+A short summary of what question the project answers, what methods are used, and any policy (or business) implications from the findings.
+\end{singlespace}
+
+\end{abstract}
+\vfill{}
+
+
+\pagebreak{}
+
+
+\section{Introduction}\label{sec:intro}
+One of the biggest factors in a season that teams must answer is the product of scoring goals. More goals lead to more wins which can lead to a playoff appearance. The Stanley Cup is the most coveted trophy in hockey and can drive fans and owners crazy. Teams will explore every avenue they can to score more goals, win more games, and win Lord Stanley's Cup.
+
+One of the big trends within the sports world has been the analytics boom brought about in the 2000s. Teams have been exploring new ways to adjust and gain an advantage over the other teams in their league. Major League Baseball adopted Sabremetrics, the National Football League has adopted a more aggressive fourth down strategy, and the National Basketball Association has started taking more 3s and layups all due to analytical reasoning. The National Hockey League has...nothing like that. The lack of hockey analytics is an issue and has lagged the game behind in the public discourse. Creating a framework to make decisions would help advance the sport of hockey in the world of analytics.
+
+With the recent developments of machine learning, seeing if it can accurately predict hockey related statistics and outcomes could help front office decision makers make their decisions on roster construction. Creating an analytical framework to predict the goals of a season is a first step in moving hockey analtyics forward. Front office decision makers are looking for new ways to make decisions. Making their own models to predict things could be an important part of a possible Stanley Cup run. 
+
+Machine Learning can be trained to produce a model to classify if shots are a goal or not. This can be used to see if machine learning is a viable process for roster decisions. Testing the tribes of machine learning to see how accurate they are will help front office decisions makers make that decision easier.
+
+\section{Literature Review}\label{sec:litreview}
+
+\begin{enumerate}
+    \item General topics on analytics movements in sports (Moneyball, 4th down, etc.)
+    \item Hockey performance analytics movement (Stat Shot)
+    \item Possible intersection of ML and sports/hockey analytics
+    \item Possible NHL front office research
+\end{enumerate}
+
+\section{Data}\label{sec:data}
+The primary data source for this research is National Hockey League play by play data from the hockeyR package. 
+
+\begin{enumerate}
+    \item Start with 112 columns of data
+    \item Filter down to shot events(missed shots, shots on net, goals). Excluding blocked shots due to the fact they do not score goals
+    \item create factors for text variables I'm interested in 
+    \item remove columns that are unnecessary from dataset
+    \item drop rows that have NA values due to errors caused in empirical research
+\end{enumerate}
+
+
+\section{Empirical Methods}\label{sec:methods}
+While my approach explores a number of different approaches, the primary empirical model can be depicted in the following equation:
+
+\begin{equation}
+\label{eq:1}
+Goal=\alpha_{0} + \alpha_{1}SD + \alpha_{2} SA + \alpha_{3} P + \alpha_{4} PSR + \alpha_{5} SH + \alpha_{6} PP + \varepsilon,
+\end{equation}
+where $Goal$ is a binary classification for if a shot is a goal or not, and $SD$ is the shot distance from the net, while $SA$ is the angle of the shot from the middle of the net when facing it, while $P$ is the period the game is in, while $PSR$ is period seconds remaining, while $SH$ and $PP$ are dummy variables that denote if the shot was short handed or on the power play, respectively. 
+
+\begin{enumerate}
+    \item Set up multiple ML classification models
+    \item Record accuracy for different ML models
+    \item Compare accuracy to find best model
+    \item Denote which one could be used in real application, if any
+\end{enumerate}
+
+\section{Research Findings}\label{sec:results}
+The main results are reported in Table \ref{tab:estimates}.
+
+Summary: Discuss results on if ML is a useful tool for sports analytics and such. 
+
+\section{Conclusion}\label{sec:conclusion}
+
+Summary: ML is (not) a good tool for this project. Where to go from here and how it impacts sports analytics and hockey specifically. Make clear how to apply things.
+
+\vfill
+\pagebreak{}
+\begin{spacing}{1.0}
+\bibliographystyle{jpe}
+\bibliography{References.bib}
+\addcontentsline{toc}{section}{References}
+\end{spacing}
+
+\vfill
+\pagebreak{}
+\clearpage
+
+%========================================
+% FIGURES AND TABLES 
+%========================================
+\section*{Figures and Tables}\label{sec:figTables}
+\addcontentsline{toc}{section}{Figures and Tables}
+%----------------------------------------
+% Figure 1
+%----------------------------------------
+To be filled in
+\begin{figure}[ht]
+\centering
+\bigskip{}
+\includegraphics[width=.9\linewidth]{fig1.eps}
+\caption{Figure caption goes here}
+\label{fig:fig1}
+\end{figure}
+
+%----------------------------------------
+% Table 1
+%----------------------------------------
+To be filled in
+\begin{table}[ht]
+\caption{Summary Statistics of Variables of Interest}
+\label{tab:descriptives} 
+\centering
+\begin{threeparttable}
+\begin{tabular}{lcccc}
+&&&&\\
+\multicolumn{5}{l}{\emph{Panel A: Summary Statistics for Variables of Interest}}\\
+\toprule
+                                                        & Mean  & Std. Dev. & Min   & Max   \\
+\midrule
+Outcome variable 1                                      & 4.127 & 1.709     & 0.000 & 8.516 \\
+Outcome variable 2                                      & 1.293 & 0.648     & 0.000 & 0.216 \\
+Policy variable                                         & 0.685 & 0.464     & 0.000 & 1.000 \\
+Control variable 1                                      & 0.451 & 0.497     & 0.000 & 1.000 \\
+Control variable 2                                      & 0.322 & 0.467     & 0.000 & 1.000 \\
+&&&&\\
+\multicolumn{5}{l}{\emph{Panel B: Sample Means of Outcome Variables for Subgroups}}\\
+\midrule
+                                                        & Group 1 & Group 2 & Group 3 & Group 4 \\
+\midrule
+Outcome variable 1                                      & 1.782  & 2.181  & 3.749  & 4.127  \\
+Outcome variable 2                                      & 0.824  & 0.971  & 1.215  & 1.693  \\
+\midrule
+$N$                                                     & 25,796 & 75,879 & 37,157 & 33,839 \\
+\bottomrule
+\end{tabular}
+\footnotesize Notes: Put any notes about the table here. Sample size for all variables in Panel A is $N=172,671$.
+\end{threeparttable}
+\end{table}
+
+
+%----------------------------------------
+% Table 2
+%----------------------------------------
+To be filled in
+\begin{table}[ht]
+\caption{Empirical estimates of parameter of interest}
+\label{tab:estimates} 
+\centering
+\begin{threeparttable}
+\begin{tabular}{lcc}
+\toprule
+                            & Few Controls    & Many Controls \\
+\midrule
+Variable of interest        & -1.977***       & -0.536**    \\
+                            & (0.219)         & (0.214)     \\
+Individual characteristics  & $\checkmark$    & $\checkmark$\\
+Firm characteristics        &                 & $\checkmark$\\
+Location dummies            &                 & $\checkmark$\\
+\midrule
+$N$                         & 172,671         & 172,671      \\
+\bottomrule
+\end{tabular}
+\footnotesize Notes: Table notes here. Standard errors in parentheses. ***Significantly different from zero at the 1\% level; **Significantly different from zero at the 5\% level.
+\end{threeparttable}
+\end{table}
+
+
+\end{document}
