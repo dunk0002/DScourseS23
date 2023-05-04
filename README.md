@@ -135,11 +135,11 @@ Final grades will be assigned according to the standard cutoffs (90%+ for an A, 
 | Apr 13  | Th   | Machine learning vs. econometrics ([Slides](https://raw.githack.com/tyleransom/DScourseS23/master/LectureNotes/24-ML-vs-Econometrics/24slides.html)) | |
 | Apr 18  | T    | Discrete choice modeling: static discrete choice ([Slides](https://raw.githack.com/tyleransom/DScourseS23/master/LectureNotes/25_26-Discrete-Choice/25_26slides.html)) | [PS 10](https://raw.githack.com/tyleransom/DScourseS23/master/ProblemSets/PS10/PS10.pdf) |
 | Apr 20  | Th   | Discrete choice modeling: dynamic discrete choice ([Slides](https://raw.githack.com/tyleransom/DScourseS23/master/LectureNotes/25_26-Discrete-Choice/25_26slides.html)) | |
-| Apr 25  | T    | Strategies for more powerfully utilizing LLMs | [PS 11](https://raw.githack.com/tyleransom/DScourseS23/master/ProblemSets/PS11/PS11.pdf) |
+| Apr 25  | T    | Strategies for more powerfully utilizing LLMs ([Slides](https://raw.githack.com/tyleransom/DScourseS23/master/LectureNotes/27-GPT/27slides.html)) | [PS 11](https://raw.githack.com/tyleransom/DScourseS23/master/ProblemSets/PS11/PS11.pdf) |
 | Apr 27  | Th   | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | |
 | May 2   | T    | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | |
 | May 4   | Th   | Final Project presentations ([Rubric](https://github.com/tyleransom/DScourseS23/blob/master/FinalProject/README.md)) | [PS 12](https://raw.githack.com/tyleransom/DScourseS23/master/ProblemSets/PS12/PS12.pdf) |
-| May 8   | M    | Final Exam (in class, 1:30-3:30pm) | Final project due ([Scoresheet](https://raw.githack.com/tyleransom/DScourseS23/master/FinalProject/Scoresheet.pdf)) |
+| May 8   | M    | Final Exam (in class, 1:30-3:30pm) | Final project due by May 10 at 11:59pm ([Scoresheet](https://raw.githack.com/tyleransom/DScourseS23/master/FinalProject/Scoresheet.pdf)) |
 
 ## Helpful Links ##
 
